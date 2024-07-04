@@ -47,3 +47,4 @@ This project is a cryptocurrency exchange system built with PHP Laravel. It supp
    ```sh
    php artisan serve
    ```
+   POSTMAN FILE NAME : Crypto Exchange API.postman_collection.json
