@@ -82,7 +82,7 @@ class MoneyTransferController extends Controller
             return response()->json(['error' => 'Insufficient balance'], 400);
         }
 
-        $transaction = new Transactiontion();
+        $transaction = new Transaction();
         $transaction->from_user_id = $fromUserId;
         $transaction->currency_id = $currencyId;
         $transaction->amount = $amount;

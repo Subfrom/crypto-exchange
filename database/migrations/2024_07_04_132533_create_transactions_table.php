@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('order_id')->constrained()->onDelete('cascade');
+            $table->unsignedBigInteger('order_id')->nullable();
+            $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
             $table->foreignId('from_user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('to_user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('currency_id')->constrained()->onDelete('cascade');
